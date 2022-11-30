@@ -1,0 +1,64 @@
+@import "../../../styles/constants";
+
+.book {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #eee;
+  border-radius: $radius;
+  background-color: lighten($primary-bg-color, 67%);
+  margin: 0.5rem;
+  padding: 2rem;
+  width: 320px;
+
+  a {
+    text-decoration: none;
+  }
+
+  .infos {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    .title {
+      color: black;
+      font-size: 1.3rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .author {
+      color: #aaa;
+      font-size: 1rem;
+      font-weight: lighter;
+    }
+  }
+
+  .commands {
+    width: 5rem;
+
+    button {
+      transition: background-color 0.5s ease;
+      background-color: white;
+      border: 1px solid #ccc;
+      margin: 2px;
+
+      &:hover {
+        background-color: darken(white, 10%);
+      }
+    }
+
+    span {
+      transition: background-color 0.5s ease;
+      background-color: white;
+      padding: 0.2rem 0.5rem;
+      font-weight: bold;
+      color: #333;
+
+      &.lowStock {
+        background-color: red;
+        border-radius: 50%;
+        color: white;
+      }
+    }
+  }
+}

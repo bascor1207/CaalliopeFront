@@ -1,0 +1,42 @@
+@import "constants";
+
+.form {
+  padding: 2rem;
+
+  .form-error {
+    background-color: lighten(red, 20%);
+    border-radius: $radius;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    color: white;
+  }
+
+  .form-field {
+    margin-bottom: 1rem;
+
+    select,
+    input,
+    textarea {
+      box-sizing: border-box;
+      border-color: #ccc;
+      border-style: solid;
+      border-radius: $radius;
+      padding: 0.75rem 0.5rem;
+      width: 100%;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 0.4rem;
+    }
+  }
+
+  .form-commands {
+    margin-top: 2rem;
+  }
+}

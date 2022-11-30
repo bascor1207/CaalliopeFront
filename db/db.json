@@ -1,0 +1,70 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "La PESTE",
+      "author": "CAMUS Albert",
+      "stock": 3,
+      "resume": "- Naturellement, vous savez ce que c'est, Rieux ? - J'attends le résultat des analyses. - Moi, je le sais. Et je n'ai pas besoin d'analyses. J'ai fait une partie de ma carrière en Chine, et j'ai vu quelques cas à Paris, il y a une vingtaine d'années. Seulement, on n'a pas osé leur donner un nom, sur le moment... Et puis, comme disait un confrère : C'est impossible, tout le monde sait qu'elle a disparu de l'Occident. Oui, tout le monde le savait, sauf les morts. Allons, Rieux, vous savez aussi bien que moi ce que c'est... - Oui, Castel, dit-il, c'est à peine croyable. Mais il semble bien que ce soit la peste."
+    },
+    {
+      "id": 2,
+      "title": "Les Misérables",
+      "author": "HUGO Victor",
+      "stock": 7,
+      "resume": "Le destin de Jean Valjean, forçat échappé du bagne, est bouleversé par sa rencontre avec Fantine. Mourante et sans le sou, celle-ci lui demande de prendre soin de Cosette, sa fille confiée aux Thénardier. Ce couple d’aubergistes, malhonnête et sans scrupules, exploitent la fillette jusqu’à ce que Jean Valjean tienne sa promesse et l’adopte. Cosette devient alors sa raison de vivre. Mais son passé le rattrape et l’inspecteur Javert le traque…"
+    },
+    {
+      "title": "Les Contemplations",
+      "author": "",
+      "resume": "Raconter sa vie et en même temps son époque, tel est le défi que se lance Victor Hugo dans Les Contemplations, qu'il définit comme les \" Mémoires d'une âme \". Romantique et engagé,\nce recueil est une histoire de la France de la première moitié du XIXe siècle. On y retrouve cette dynamique personnelle et historique qui fait la profondeur de l'œuvre de Victor Hugo.",
+      "stock": 1,
+      "id": 3
+    },
+    {
+      "title": "Les Contemplations",
+      "author": "CAMUS Albert",
+      "resume": "Raconter sa vie et en même temps son époque, tel est le défi que se lance Victor Hugo dans Les Contemplations, qu'il définit comme les \" Mémoires d'une âme \". Romantique et engagé,\nce recueil est une histoire de la France de la première moitié du XIXe siècle. On y retrouve cette dynamique personnelle et historique qui fait la profondeur de l'œuvre de Victor Hugo.",
+      "stock": 3,
+      "id": 4
+    },
+    {
+      "title": "azezeraze",
+      "author": "HUGO Victor",
+      "resume": "azerazer",
+      "stock": 0,
+      "id": 5
+    }
+  ],
+  "authors": [
+    {
+      "firstName": "Victor",
+      "lastName": "HUGO",
+      "id": 1
+    },
+    {
+      "firstName": "Albert",
+      "lastName": "CAMUS",
+      "id": 2
+    },
+    {
+      "firstName": "René",
+      "lastName": "BARJAVEL",
+      "id": 3
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Toto",
+      "email": "toto@toto.fr",
+      "password": "toto"
+    },
+    {
+      "id": 2,
+      "name": "Tata",
+      "email": "tata@tata.fr",
+      "password": "tata"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+.lang {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+
+  span {
+    &.active {
+      font-weight: bold;
+    }
+
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+}
