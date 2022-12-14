@@ -25,6 +25,7 @@
         "no-dupe-class-members":"warn",
         "no-dupe-else-if":"error",
         "no-setter-return":"error",
-        "no-unused-vars" :"warn"
+        "no-unused-vars" :"warn",
+        "no-this-before-super":"warn"
     }
 }
