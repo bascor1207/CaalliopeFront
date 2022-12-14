@@ -32,30 +32,40 @@ export const Login = () => {
   };
 
   return (
-    <form className="form" onSubmit={handleSubmit(save)}>
+    <form className="formLogin" onSubmit={handleSubmit(save)}>
       {authError && (
         <div className="form-error">
           {authError}
         </div>
       )}
-      <div className="form-field">
-        <label htmlFor="email">Email address</label>
-        <input id="email" {...register('email', { required: true, email: true })} />
-        <FormError error={errors.email} />
+      <div className="form-label">
+        <label htmlFor="labelLogin">please identify yourself</label>
       </div>
       <div className="form-field">
-        <label htmlFor="password">Password</label>
-        <input id="password" type="password" {...register('password', { required: true })} />
-        <FormError error={errors.password} />
-    </div>
-      <div className="form-commands">
-        <button className="btn" type="button" onClick={back}>
-          Cancel
-        </button>
-        <button className="btn primary" type="submit">
-          Connect
-        </button>
+        <div className="form-email">
+          <label htmlFor="email">Email address</label>
+          <input id="email" {...register('email', { required: true, email: true })} />
+          <FormError error={errors.email} />
+        </div>
+        <div className="form-password">
+          <label htmlFor="password">Password</label>
+          <input id="password" type="password" {...register('password', { required: true })} />
+          <FormError error={errors.password} />
+        </div>
+        <div className="form-commands">
+          <button className="btn primary" type="submit">
+            Connect
+          </button>
+        </div>
+        <div class="form-ForgetPassword">
+          <a href="">Forgot your password ?</a>
+        </div>  
       </div>
+      <div className="form-signUp">
+        <label htmlFor="labelSignUp">No account?</label>
+        <a href="">Register</a>
+      </div>
+
     </form>
   );
 };
