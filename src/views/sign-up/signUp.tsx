@@ -1,6 +1,5 @@
-import React, {useState} from "react";
+import React from "react";
 import { useForm } from 'react-hook-form';
-import { FormError } from '../../components';
 
 export const signUpForm = () =>{
     type FormInputs = {
@@ -49,4 +48,3 @@ export const signUpForm = () =>{
         
     )
 }
-export default signUpForm
