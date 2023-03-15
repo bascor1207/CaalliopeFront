@@ -1,5 +1,5 @@
 import { Navigate, NavLink, Routes, Route } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 import { useEffect, lazy, Suspense } from 'react';
 
 import { NavBar, NavBarAuth, NavBarLang, Loader } from './components';
@@ -24,7 +24,6 @@ const App = () => {
   useEffect(() => {
     const locale = storageService.get(STORAGE_KEY.LOCALE);
     i18n.changeLanguage(locale || 'fr');
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleLocaleChange = (locale) => {
