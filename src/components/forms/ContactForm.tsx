@@ -2,7 +2,7 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 
-import styles from './LoginRegisterForm.module.scss';
+import styles from './ContactForm.module.scss';
 
 export const ContactForm = () => {
     const { t } = useTranslation();
