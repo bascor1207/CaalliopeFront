@@ -6,8 +6,8 @@ import { NavBar, NavBarAuth, NavBarLang, Loader } from './components';
 import { STORAGE_KEY, storageService } from './services';
 
 import styles from './App.module.scss';
-import { Header } from './components/header';
-import { Footer } from './components/footer';
+import { Header } from './components/Header';
+import { Footer } from './components/Footer';
 
 const PageNotFound = lazy(() => import('./views/PageNotFound'));
 const Books = lazy(() => import('./views/Books'));
