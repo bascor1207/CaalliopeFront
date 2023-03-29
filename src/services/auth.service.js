@@ -1,18 +1,17 @@
-import { usersService } from './users.service';
+import axios from 'axios';
 
 export const authService = {
+  apiUrl:  'http://localhost:8000/api',
 
-  connect(email, password) {
-    return usersService.findUser(email, password).then((user) => {
-      if (user) {
-        delete user.password;
-        return user;
-      }
-      throw new Error('User not found');
-    });
+  async register(firstname, lastname, email, password) {
+    return await axios.post(`${this.apiUrl}/register`, { firstname, lastname, email, password })
   },
 
-  disconnect() {
+  async login(email, password) {
+    return await axios.post(`${this.apiUrl}/login`, { email, password })
+  },
+
+  logout() {
     return true;
   }
 };
