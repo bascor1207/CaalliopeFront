@@ -1,11 +1,7 @@
 import React from "react";
 import { useNavigate } from 'react-router-dom';
 
-interface Props {
-    scrollTo: () => void;
-}
-
-export const Header: React.FC<Props> = ({scrollTo}) => {    
+export const Header = () => {    
     const navigate = useNavigate();
     {/*const { success: isLogged } = useselector(({ auth }) => auth.login);
     const { success: isRegistered } = useselector(({ auth }) => auth.register);

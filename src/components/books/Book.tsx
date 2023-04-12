@@ -8,7 +8,7 @@ import styles from './Book.module.scss';
 const DEBOUNCE_VALUE = 500;
 const MIN_STOCK = 2;
 
-export const Book = ({ book }) => {
+export const Book = ({ book }: any) => {
   const [stock, setStock] = useState(book.stock);
   const [stockStyle, setStockStyle] = useState();
   const timerId = useRef();
@@ -18,7 +18,7 @@ export const Book = ({ book }) => {
     // return () => console.log('EFFECT OUT', stock);
   }, [stock]);
 
-  const updateStock = (increment) => {
+  const updateStock = (increment: any) => {
     let newStock = stock + increment;
     newStock = newStock > 0 ? newStock : 0;
 
@@ -28,7 +28,7 @@ export const Book = ({ book }) => {
     }
   };
 
-  const debounce = (newStock) => {
+  const debounce = (newStock: any) => {
     if (timerId.current) {
       clearTimeout(timerId.current);
     }

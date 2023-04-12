@@ -1,11 +1,11 @@
 import { Routes, Route } from 'react-router-dom';
 
-import { BookDetails } from './components/BookDetails';
-import { BooksList } from './components/BooksList';
+import { BookDetails } from '../../components/books/BookDetails';
+import { BooksList } from '../../components/books/BooksList';
 
 import styles from './Books.module.scss';
 
-export const Books = () => {
+const BooksPage = () => {
   return (
     <div className={styles.books}>
       <Routes>
@@ -16,4 +16,4 @@ export const Books = () => {
   );
 };
 
-export default Books;
+export default BooksPage;
