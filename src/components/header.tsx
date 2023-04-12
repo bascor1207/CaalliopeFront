@@ -7,12 +7,12 @@ interface Props {
 
 export const Header: React.FC<Props> = ({scrollTo}) => {    
     const navigate = useNavigate();
-    const { success: isLogged } = useselector(({ auth }) => auth.login);
+    {/*const { success: isLogged } = useselector(({ auth }) => auth.login);
     const { success: isRegistered } = useselector(({ auth }) => auth.register);
     const handleLogout = () => {
         dispatch(onLogOut());
         dispatch(logout());
-    };
+    };*/}
 
     return (
         <header>
@@ -22,11 +22,11 @@ export const Header: React.FC<Props> = ({scrollTo}) => {
             <div className="navbar">
                 <a className="library" onClick={()=>navigate('/account')}>Bibliothèque</a>
                 <a className="login" onClick={()=>navigate('/login')}>Se Connecter</a>
-                {(isLogged || isRegistered) && (
+                {/*(isLogged || isRegistered) && (
                     <button className={styles.logout} onClick={() => handleLogout()}>
                         Log Out
                     </button>
-                )}
+                )*/}
             </div>
         </header>
     );
