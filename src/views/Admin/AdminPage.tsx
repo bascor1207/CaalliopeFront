@@ -4,7 +4,7 @@ import { AddBook } from '../../components/admin/AddBook';
 import { AddAuthor } from '../../components/admin/AddAuthor';
 //import { withAuth } from '../../hoc';
 
-import styles from './Admin.module.scss';
+import styles from './AdminPage.module.scss';
 
 const AdminPage = /*withAuth(*/() => (
   <div className={styles.admin}>

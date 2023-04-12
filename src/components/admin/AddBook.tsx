@@ -2,31 +2,28 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 
-import { FormError } from '../../../components';
-import { adminService } from '../services';
+import { FormError } from '../forms/FormError';
 
 import styles from './AddBook.module.scss';
 
 export const AddBook = () => {
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const { register, formState: { errors } } = useForm();
   const [errorMessage, setErrorMessage] = useState();
   const [authors, setAuthors] = useState([]);
   const navigate = useNavigate();
 
   useEffect(() => {
-    adminService.getAuthorsNames().then((authorsList) => {
+    /*adminService.getAuthorsNames().then((authorsList) => {
       setAuthors(authorsList);
-    });
+    });*/
   }, []);
 
   const back = () => {
     navigate('..');
   };
 
-  const save = (book) => {
-    setErrorMessage();
-
-    adminService.createBook({
+  const onSubmit: React.FormEventHandler<HTMLFormElement> = (book) => {
+    /*adminService.createBook({
       ...book,
       stock: +book.stock
     }).then((b) => {
@@ -34,11 +31,11 @@ export const AddBook = () => {
       back();
     }).catch((err) => {
       setErrorMessage(err.message || 'Unknown error detected');
-    });
+    });*/
   };
 
   return (
-    <form className="form" onSubmit={handleSubmit(save)}>
+    <form className="form" onSubmit={onSubmit}>
       {errorMessage && (
         <div className="form-error">
           {errorMessage}
@@ -54,14 +51,14 @@ export const AddBook = () => {
         <select id="author" {...register('author', { required: true, minLength: 2 })}>
           <option key="0" value="">Select author...</option>
           {authors.map((author) => (
-            <option key={author.id} value={author.name}>{author.name}</option>
+            <option key={author} value={author}>{author}</option>
           ))}
         </select>
         <FormError error={errors.author} />
       </div>
       <div className="form-field">
         <label htmlFor="resume">Resume</label>
-        <textarea id="resume" rows="5" {...register('resume', { minLength: 10 })} />
+        <textarea id="resume" {...register('resume', { minLength: 10 })} />
         <FormError error={errors.resume} />
       </div>
       <div className="form-field">

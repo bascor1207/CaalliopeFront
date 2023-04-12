@@ -1,6 +1,10 @@
 import styles from './FormError.module.scss';
 
-export const FormError = ({ error }) => {
+interface FormErrorProps {
+  error: any;
+}
+
+export const FormError: React.FC<FormErrorProps> = ({ error }: any) => {
   return error ? (
     <div className={styles.error}>
       {error.message || (
