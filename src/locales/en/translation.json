@@ -1,0 +1,23 @@
+{
+    "home": "Accueil",
+    "contact": "Contact",
+    "load": "Chargement... ",
+    "logout": "Déconnection",
+    "form": {
+        "login": "Connexion",
+        "register": "S'inscrire",
+        "switch": "Switch to 0",
+        "username": "Nom d'utilisateur",
+        "email": "Email",
+        "password": "Mot de passe",
+        "required": "Ce champs est obligatoire"
+    },
+    "account": {
+        "edit": "Modifier mon profile",
+        "update": "Valider",
+        "myAccount": "Mon Compte",
+        "username": "Nom d'utilisateur",
+        "email": "Email",
+        "infos": "My informations"
+    }
+}
