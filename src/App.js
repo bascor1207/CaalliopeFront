@@ -6,6 +6,7 @@ import { NavBar, NavBarAuth, NavBarLang, Loader } from './components';
 import { STORAGE_KEY, storageService } from './services';
 
 import styles from './App.module.scss';
+import { Header } from './components/Header';
 
 const PageNotFound = lazy(() => import('./views/PageNotFound'));
 const Books = lazy(() => import('./views/Books'));
@@ -33,12 +34,18 @@ const App = () => {
 
   return ready ? (
     <div className={styles.app} data-testid="app">
-      <NavBar bgColor="darkcyan" fgColor="white">
+      {/*<NavBar bgColor="darkcyan" fgColor="white">
         <NavLink to="/books">{t('NAVBAR.LINKS.BOOKS')}</NavLink>
         <NavLink to="/admin">{t('NAVBAR.LINKS.ADMIN')}</NavLink>
         <NavBarLang locale={i18n.language} changeLocale={handleLocaleChange} />
         <NavBarAuth />
-      </NavBar>
+  </NavBar>*/}
+      <Header/>
+      <main>
+
+      </main>
+      <Footer/>
+
       <Routes>
         <Route path="/" element={<Navigate to="/books" replace />} />
         <Route path="/login" element={LoadComponent(Login)} />
