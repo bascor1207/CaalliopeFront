@@ -10,12 +10,10 @@
         .library,
         .login {
             display: flex;
-            align-items: center;
-            justify-content: center;
-            align-self: center;
             font-size: 16px;
             font-weight: bold;
             cursor: pointer;
+            margin: 30px;
 
             &:hover {
                 color: black;
@@ -23,11 +21,6 @@
                 font-size: 20px;
                 transition: .5s;
             }
-        }
-
-        .logout {
-            background-color: transparent;
-            border: none;
         }
     }
 }

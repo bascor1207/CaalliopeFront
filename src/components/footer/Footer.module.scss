@@ -1,0 +1,17 @@
+.footer {
+    height: 50px;
+    background-color: #C9A0DC;
+    margin-top: 711px;
+
+    .contact {
+        cursor: pointer;
+        margin: 30px;
+        font-size: 15px;
+
+        &:hover {
+            color: black;
+            font-size: 17px;
+            transition: .5s;
+        }
+    }
+}

@@ -1,12 +1,16 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useModal } from '../../hooks/modal.hook';
+import { Modal } from '../../modal/modal';
+import { ContactForm } from '../forms/ContactForm';
+
+import styles from './Footer.module.scss';
 
 export const Footer = () => {
-    const navigate = useNavigate();
+    const { isShown, toggle } = useModal();
 
     return (
-        <footer>
-            <div className="toContact" onClick={()=>navigate('/contact')}>Nous contacter</div>
-        </footer>
+        <div className={styles.footer}>
+            <div className={styles.contact} onClick={toggle}>Nous contacter</div>
+            <Modal isShown={isShown} hideModal={toggle} modalContent={<ContactForm />} />
+        </div>
     );
 };

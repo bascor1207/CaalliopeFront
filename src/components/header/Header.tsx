@@ -18,7 +18,7 @@ export const Header = () => {
                 <img src={logo} alt="picture" />
             </div>
             <div className={styles.navbar}>
-                <a className={styles.library} onClick={()=>navigate('/account')}>Bibliothèque</a>
+                <a className={styles.library} onClick={()=>navigate('/books')}>Bibliothèque</a>
                 <a className={styles.login} onClick={()=>navigate('/login')}>Se Connecter</a>
                 {/*(isLogged || isRegistered) && (
                     <button className={styles.logout} onClick={() => handleLogout()}>
