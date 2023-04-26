@@ -13,9 +13,9 @@ import { LoginRegisterPage } from './views/Login/LoginPage';
 import styles from './App.module.scss';
 
 export const App = () => {
-  const { i18n, ready } = useTranslation();
+    const { i18n, ready } = useTranslation();
 
-  /*useEffect(() => {
+    /*useEffect(() => {
     const locale = storageService.get(STORAGE_KEY.LOCALE);
     i18n.changeLanguage(locale || 'fr');
   }, []);
@@ -25,31 +25,25 @@ export const App = () => {
     i18n.changeLanguage(locale);
   }*/
 
-  return ready ? (
-    <div className={styles.app} data-testid="app">
-      {/*<NavBar bgColor="darkcyan" fgColor="white">
-        <NavLink to="/books">{t('NAVBAR.LINKS.BOOKS')}</NavLink>
-        <NavLink to="/admin">{t('NAVBAR.LINKS.ADMIN')}</NavLink>
-        <NavBarLang locale={i18n.language} changeLocale={handleLocaleChange} />
-        <NavBarAuth />
-      </NavBar>*/}
-      <header className={styles.header}>
-        <Routes>
-          <Route path="/" element={<Header />} />
-          {/*<NavBarLang locale={i18n.language} changeLocale={handleLocaleChange} />*/}
-        </Routes>
-      </header>
-      <Routes>
-        <Route path="/login" element={<LoginRegisterPage />} />
-        <Route path="/books/*" element={<BooksPage />} />
-        <Route path="/admin/*" element={<AdminPage />} />
-        {/*<Route path="*" element={<PageNotFound />} />*/}
-      </Routes>
-      <footer>
-        <Footer />
-      </footer>
-    </div>
-  ) : null;
+    return (
+        <div className={styles.app} data-testid="app">
+            <header className={styles.header}>
+                <Routes>
+                    <Route path="/" element={<Header />} />
+                    {/*<NavBarLang locale={i18n.language} changeLocale={handleLocaleChange} />*/}
+                </Routes>
+            </header>
+            <Routes>
+                <Route path="/login" element={<LoginRegisterPage />} />
+                {/*<Route path="/books/*" element={<BooksPage />} />*/}
+                <Route path="/admin/*" element={<AdminPage />} />
+                {/*<Route path="*" element={<PageNotFound />} />*/}
+            </Routes>
+            <footer>
+                <Footer />
+            </footer>
+        </div>
+    );
 };
 
 export default App;

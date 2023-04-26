@@ -9,9 +9,9 @@ import { login, registerUser, setUser } from '../../store/slices';*/
 
 import { IRegisterAndLoginData } from '../../interfaces/IRegisterAndLoginData';
 
-import styles from './LoginRegisterForm.module.scss';
+//import styles from './LoginRegisterForm.module.scss';
 
-export const LoginRegisterForm = () => {
+const LoginRegisterForm = () => {
     const { t } = useTranslation();
     const [isLogin, setIsLogin] = useState(false);
     const {
@@ -40,25 +40,25 @@ export const LoginRegisterForm = () => {
 
     return (
         <form onSubmit={onSubmit}>
-            <div className={styles.container}>
-                <span className={styles.title}>{tradToDisplay}</span>
-                <div className={styles.email}>
+            <div className="container">
+                <span className="title">{tradToDisplay}</span>
+                <div className="email}">
                     <label>{t('form.email')}</label>
-                    <input className={styles['email-input']} type="email" name="email" required />
+                    <input className="email-input" type="email" name="email" required />
                     {errors.email && <span>{t('form.required')}</span>}
                 </div>
-                <div className={styles.password}>
+                <div className="password}">
                     <label>{t('form.password')}</label>
-                    <input className={styles['password-input']} type="password" name="password" required />
+                    <input className="password-input" type="password" name="password" required />
                     {errors.password && <span>{t('form.required')}</span>}
                 </div>
-                <div className={styles.buttons}>
-                    <button className={styles.switch} onClick={() => setIsLogin(!isLogin)}>
+                <div className="buttons">
+                    <button className="switch" onClick={() => setIsLogin(!isLogin)}>
                         {isLogin
                             ? t('form.switch').replace('0', t('form.register'))
                             : t('form.switch').replace('0', t('form.login'))}
                     </button>
-                    <button className={styles.submit} type="submit">
+                    <button className="submit" type="submit">
                         {tradToDisplay}
                     </button>
                 </div>

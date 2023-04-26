@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
 
-import { booksService } from '../services';
-import { Book } from './Book';
+//import { booksService } from '../services';
+//import { Book } from './Book';
 
-import styles from './BooksList.module.scss';
+//import styles from './BooksList.module.scss';
 
 export const BooksList = () => {
-  const [books, setBooks] = useState();
+  /*const [books, setBooks] = useState();
 
   useEffect(() => {
     booksService.getBooks().then((books) => {
@@ -20,5 +20,5 @@ export const BooksList = () => {
         <Book key={b.id} book={b} />
       ))}
     </div>
-  );
+  );*/
 };
