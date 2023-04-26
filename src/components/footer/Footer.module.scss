@@ -1,16 +1,16 @@
 .footer {
-    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     background-color: #C9A0DC;
+    padding: 40px;
 
     .contact {
         cursor: pointer;
-        margin: 30px;
-        font-size: 15px;
+        font-size: 20px;
 
         &:hover {
-            color: black;
-            font-size: 17px;
-            transition: .5s;
+            font-weight: bold;
         }
     }
 }
