@@ -18,7 +18,7 @@ export const NavBarAuth = () => {
       {/*loggedUser ? (
         <>
           <div>
-            Hello {loggedUser.name} !
+            Hello {loggedUser.firstname} !
           </div>
           <button className="btn" onClick={() => disconnect()}>
             Logout
