@@ -27,7 +27,7 @@ export const CarouselBook: React.FC<CarouselProps> = ({ itemsTypes = '' }) => {
     ];
 
     const LastReleaseBooks = () => (
-        <div className={styles['container']}>
+        <div className={styles.container}>
             <AliceCarousel
                 mouseTracking
                 items={items}
@@ -38,7 +38,7 @@ export const CarouselBook: React.FC<CarouselProps> = ({ itemsTypes = '' }) => {
     );
 
     const PopularBooks = () => (
-        <div className={styles['container']}>
+        <div className={styles.container}>
             <AliceCarousel
                 mouseTracking
                 items={items}
