@@ -6,7 +6,7 @@ import { authDisconnect } from '../redux/actions';
 import styles from './NavBarAuth.module.scss';
 
 export const NavBarAuth = () => {
-  const loggedUser = useSelector(({ auth }) => auth.loggedUser);
+  //const loggedUser = useSelector(({ auth }) => auth.loggedUser);
   const dispatch = useDispatch();
 
   const disconnect = () => {
@@ -15,7 +15,7 @@ export const NavBarAuth = () => {
 
   return (
     <div className={styles.auth}>
-      {loggedUser ? (
+      {/*loggedUser ? (
         <>
           <div>
             Hello {loggedUser.name} !
@@ -26,7 +26,7 @@ export const NavBarAuth = () => {
         </>
       ) : (
         <NavLink to="/login">Login</NavLink>
-      )}
+      )*/}
     </div>
   );
 };

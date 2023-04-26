@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 
-import { booksService } from '../services';
+//import { booksService } from '../services';
 
-import styles from './BookDetails.module.scss';
+//import styles from './BookDetails.module.scss';
 
 export const BookDetails = () => {
-  const [error, setError] = useState();
+  /*const [error, setError] = useState();
   const [book, setBook] = useState();
   const { id } = useParams();
 
@@ -35,5 +35,5 @@ export const BookDetails = () => {
     </div>
   ) : (error) ? (
     <div>Error detected</div>
-  ) : null;
+  ) : null;*/
 };

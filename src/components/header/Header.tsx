@@ -1,11 +1,9 @@
-import React from "react";
 import { useNavigate } from 'react-router-dom';
+import logo from '../../assets/images/logo.png';
 
-interface Props {
-    scrollTo: () => void;
-}
+import styles from './Header.module.scss';
 
-export const Header: React.FC<Props> = ({scrollTo}) => {    
+export const Header = () => {    
     const navigate = useNavigate();
     {/*const { success: isLogged } = useselector(({ auth }) => auth.login);
     const { success: isRegistered } = useselector(({ auth }) => auth.register);
@@ -15,13 +13,13 @@ export const Header: React.FC<Props> = ({scrollTo}) => {
     };*/}
 
     return (
-        <header>
-            <div className="logo">
-                <img src="" alt="picture" />
+        <header className={styles.container}>
+            <div className={styles.logo}>
+                <img src={logo} alt="picture" />
             </div>
-            <div className="navbar">
-                <a className="library" onClick={()=>navigate('/account')}>Bibliothèque</a>
-                <a className="login" onClick={()=>navigate('/login')}>Se Connecter</a>
+            <div className={styles.navbar}>
+                <a className={styles.library} onClick={()=>navigate('/account')}>Bibliothèque</a>
+                <a className={styles.login} onClick={()=>navigate('/login')}>Se Connecter</a>
                 {/*(isLogged || isRegistered) && (
                     <button className={styles.logout} onClick={() => handleLogout()}>
                         Log Out

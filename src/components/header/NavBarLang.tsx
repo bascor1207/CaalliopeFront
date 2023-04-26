@@ -2,8 +2,8 @@ import PropTypes from 'prop-types';
 
 import styles from './NavBarLang.module.scss';
 
-export const NavBarLang = ({ locale, changeLocale }) => {
-  const isActive = (lang) => locale === lang ? styles.active : '';
+export const NavBarLang = ({ locale, changeLocale }: any) => {
+  const isActive = (lang: any) => locale === lang ? styles.active : '';
 
   return (
     <div className={styles.lang}>

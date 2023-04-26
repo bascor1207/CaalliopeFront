@@ -2,14 +2,15 @@ import PropTypes from 'prop-types';
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import { booksService } from '../services';
-import styles from './Book.module.scss';
+//import { booksService } from '../../views/Books/services/books.service';
+
+//import styles from './Book.module.scss';
 
 const DEBOUNCE_VALUE = 500;
 const MIN_STOCK = 2;
 
-export const Book = ({ book }) => {
-  const [stock, setStock] = useState(book.stock);
+export const Book = ({ book }: any) => {
+  /*const [stock, setStock] = useState(book.stock);
   const [stockStyle, setStockStyle] = useState();
   const timerId = useRef();
 
@@ -18,7 +19,7 @@ export const Book = ({ book }) => {
     // return () => console.log('EFFECT OUT', stock);
   }, [stock]);
 
-  const updateStock = (increment) => {
+  const updateStock = (increment: any) => {
     let newStock = stock + increment;
     newStock = newStock > 0 ? newStock : 0;
 
@@ -28,18 +29,18 @@ export const Book = ({ book }) => {
     }
   };
 
-  const debounce = (newStock) => {
+  const debounce = (newStock: any) => {
     if (timerId.current) {
       clearTimeout(timerId.current);
     }
-    timerId.current = setTimeout(() => {
+    //timerId.current = setTimeout(() => {
       booksService.updateStock(book.id, newStock).then((b) => {
         // console.log('STOCK CHANGED', b);
       });
-    }, DEBOUNCE_VALUE);
-  };
+    //}, DEBOUNCE_VALUE);
+  };*/
 
-  return (
+  /*return (
     <div className={styles.book}>
       <div className={styles.infos}>
         <Link to={`${book.id}`}>
@@ -63,7 +64,7 @@ export const Book = ({ book }) => {
         <span className={stockStyle}>{stock}</span>
       </div>
     </div>
-  );
+  );*/
 };
 
 Book.propTypes = {
