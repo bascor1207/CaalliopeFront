@@ -11,14 +11,14 @@ const HomePage = () => {
                 Last Release Book
             </div>
             <div className={styles.carousel}>
-                <CarouselBook itemsTypes='release' />
+                <CarouselBook itemsTypes="release" />
             </div>
             
             <div className={styles.popular}>
                 Popular Book
             </div>
             <div className={styles.carousel}>
-                <CarouselBook itemsTypes='popular' />
+                <CarouselBook itemsTypes="popular" />
             </div>
             
         </div>
