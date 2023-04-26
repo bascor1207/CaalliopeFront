@@ -4,7 +4,7 @@ import AliceCarousel from 'react-alice-carousel';
 
 import 'react-alice-carousel/lib/alice-carousel.css';
 
-import styles from './Carousel.module.scss';
+import styles from './CarouselBook.module.scss';
 
 interface CarouselProps {
     itemsTypes: string;
@@ -35,7 +35,7 @@ export const CarouselBook: React.FC<CarouselProps> = ({ itemsTypes = '' }) => {
                 controlsStrategy="alternate"
             />
         </div>
-    )
+    );
 
     const PopularBooks = () => (
         <div className={styles['container']}>
@@ -46,7 +46,7 @@ export const CarouselBook: React.FC<CarouselProps> = ({ itemsTypes = '' }) => {
                 controlsStrategy="alternate"
             />
         </div>
-    )
+    );
 
     return <div>{itemsTypes=='release' ? <LastReleaseBooks /> : <PopularBooks />}</div>;
-}
+};
