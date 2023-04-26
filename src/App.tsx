@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { Header } from './components/header/Header';
 import { Footer } from './components/footer/Footer';
 
+import HomePage from './views/Home/HomePage';
 import BooksPage from './views/Books/BooksPage';
 import AdminPage from './views/Admin/AdminPage';
 import { LoginRegisterPage } from './views/Login/LoginPage';
@@ -34,6 +35,7 @@ export const App = () => {
                 </Routes>
             </header>
             <Routes>
+                <Route path="/" element={<HomePage />} />
                 <Route path="/login" element={<LoginRegisterPage />} />
                 {/*<Route path="/books/*" element={<BooksPage />} />*/}
                 <Route path="/admin/*" element={<AdminPage />} />

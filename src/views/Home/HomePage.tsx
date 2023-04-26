@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { CarouselBook } from './components/CarouselBook';
+import { CarouselBook } from '../../components/home/CarouselBook';
 import styles from './HomePage.module.scss';
 
 const HomePage = () => {
