@@ -9,21 +9,16 @@
         'message'
         'buttons';
     gap: 16px;
+    background-color: #d9d9d9;
+    width: 500px;
 
     .title {
         align-self: center;
         justify-self: center;
-        font-size: 24px;
-        color: #FBFCFF;
-        background-color: #68927e;
+        font-size: 25px;
+        color: black;
         padding: 16px 32px;
         margin-bottom: 16px;
-        border-radius: 50px;
-        box-shadow:
-            0 0 5px #7ad8a999,
-            0 0 25px #7ad8a999,
-            0 0 50px #7ad8a9,
-            0 0 100px white;
     }
 
     .firstname,
@@ -35,6 +30,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        font-size: 15px;
     }
 
     .firstname {
@@ -144,19 +140,19 @@
             border: none;
             margin: auto 8px auto 8px;
             border-radius: 50px;
-            background-color: #68927e;
-            color: #FBFCFF;
+            background-color: #ffffff;
+            color: black;
             height: 48px;
             width: 150px;
             transition: .5s;
 
             &:hover {
-                background-color: #FBFCFF;
-                color: #68927e;
+                background-color: #ffffff;
+                color: #C9A0DC;
                 box-shadow:
-                    0 0 5px #7ad8a999,
-                    0 0 25px #7ad8a999,
-                    0 0 50px #7ad8a9,
+                    0 0 5px #C9A0DC,
+                    0 0 25px #C9A0DC,
+                    0 0 50px #C9A0DC,
                     0 0 100px white;
                 transition: .5s;
             }
