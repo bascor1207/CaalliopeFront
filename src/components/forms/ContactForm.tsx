@@ -18,35 +18,35 @@ export const ContactForm = () => {
     return (
         <form onSubmit={onSubmit}>
             <div className={styles.container}>
-                <span className={styles.title}>{t('form.contact')}</span>
+                <span className={styles.title}>Contact</span>
                 <div className={styles.firstname}>
-                    <label>{t('form.firstname')}</label>
+                    <label>Firstname</label>
                     <input className={styles['firstname-input']} type="text" name="firstname" required />
-                    {errors.firstname && <span>{t('form.required')}</span>}
+                    {errors.firstname && <span>Required</span>}
                 </div>
                 <div className={styles.lastname}>
-                    <label>{t('form.lastname')}</label>
+                    <label>Lastname</label>
                     <input className={styles['lastname-input']} type="text" name="lastname" required />
-                    {errors.lastname && <span>{t('form.required')}</span>}
+                    {errors.lastname && <span>Required</span>}
                 </div>
                 <div className={styles.email}>
-                    <label>{t('form.email')}</label>
+                    <label>Email</label>
                     <input className={styles['email-input']} type="email" name="email" required />
-                    {errors.email && <span>{t('form.required')}</span>}
+                    {errors.email && <span>Required</span>}
                 </div>
                 <div className={styles.subject}>
-                    <label>{t('form.subject')}</label>
+                    <label>Subject</label>
                     <input className={styles['subject-input']} type="text" name="subject" required />
-                    {errors.subject && <span>{t('form.required')}</span>}
+                    {errors.subject && <span>Required</span>}
                 </div>
                 <div className={styles.message}>
-                    <label>{t('form.message')}</label>
+                    <label>Message</label>
                     <input className={styles['message-input']} type="text" name="message" required />
-                    {errors.message && <span>{t('form.required')}</span>}
+                    {errors.message && <span>Required</span>}
                 </div>
                 <div className={styles.buttons}>
                     <button className={styles.submit} type="submit">
-                        {t('form.send')}
+                        Send
                     </button>
                 </div>
             </div>
